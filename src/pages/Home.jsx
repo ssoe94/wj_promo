@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import HeroSection from "../components/HeroSection";
 import { useLanguage } from "../context/LanguageContext";
 import { usePageMetadata } from "../hooks/usePageMetadata";
 
@@ -8,30 +9,7 @@ const Home = () => {
 
   return (
     <div className="page home-page">
-      <section className="hero">
-        <div className="hero-content">
-          <p className="eyebrow">{content.hero.eyebrow}</p>
-          <h1>{content.hero.title}</h1>
-          <p className="lead">{content.hero.subtitle}</p>
-          <div className="hero-ctas">
-            <Link className="primary-btn" to="/products">
-              {content.hero.primaryCta}
-            </Link>
-            <Link className="secondary-btn" to="/contact">
-              {content.hero.secondaryCta}
-            </Link>
-          </div>
-        </div>
-        <div className="hero-visual">
-          <div className="hero-placeholder large" aria-label="Factory image placeholder">
-            <span>{content.common.companyName}</span>
-            <p>{content.common.vision}</p>
-          </div>
-          <div className="hero-placeholder small" aria-label="MES dashboard placeholder">
-            <span>{content.home.factoryHeading}</span>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       <section className="card-section">
         <h2>{content.home.strengthsHeading}</h2>

@@ -14,9 +14,10 @@ export const translations = {
       companyName: "Nanjing Wanjia Precesion Injection Co., Ltd.",
       legalName: "Nanjing Wanjia Precision Injection Co., Ltd.",
       vision: "Smart, global, precision manufacturing based on quality and digital innovation.",
-      address: "No. 18 Innovation Road, Jiangning Smart Manufacturing Zone, Nanjing, China",
-      phone: "+86-25-6123-8899",
-      email: "info@plasynex.com",
+      address: "No. 15 Xingke Road, Nanjing Economic & Technological Development Zone, Jiangsu, China (210038)",
+      phone: "+86 25 8556 8600",
+      fax: "+86 25 8561 1800",
+      email: "lizairong@njwanjia.com",
       hours: "Mon–Fri 08:30–18:00 CST",
       slogan: "Precision Injection Molding for a Smarter Future",
     },
@@ -56,19 +57,23 @@ export const translations = {
       home: "Home",
       about: "About Us",
       products: "Products",
-      quality: "Quality System",
-      manufacturing: "Manufacturing",
+      quality: "Quality",
+      manufacturing: "Production",
       contact: "Contact",
     },
     hero: {
-      eyebrow: "Smart, global precision manufacturing",
-      title: "Precision Injection Molding for a Smarter Future",
-      subtitle:
-        "Plasynex (Nanjing Wanjia Precision Injection Co., Ltd.) unites tooling expertise, MES visibility, and high-cosmetic finishing to deliver complex monitor, EV, and packaging programs for global OEMs.",
+      eyebrow: "Smart · Global · Precision Manufacturing",
+      companyLine: "Nanjing Wanjia Precision Injection Co., Ltd.",
+      title: "Your partner for precision injection products in the smart manufacturing era",
+      description:
+        "Leveraging decades of precision molding expertise and data-driven process control, we manage every step from design through assembly to deliver stable quality and efficient production. From monitor, TV, and appliance housings for global brands to EV battery production and logistics trays, everything is produced on one integrated campus.",
+      identityLine1: "Nanjing Wanjia Precision Injection Co., Ltd.",
+      identityLine2: "PRECISION · QUALITY · RELIABILITY",
       primaryCta: "Explore Products",
       secondaryCta: "Request a Quote",
     },
     home: {
+      visualHeadline: "Smart, precise manufacturing in action",
       strengthsHeading: "Key strengths",
       strengths: [
         {
@@ -287,6 +292,7 @@ export const translations = {
       description: "Tell us about your monitor, battery, or EV component roadmap and we will tailor a launch plan.",
       addressLabel: "Address",
       phoneLabel: "Phone",
+      faxLabel: "Fax",
       emailLabel: "Email",
       hoursLabel: "Hours",
       form: {
@@ -302,8 +308,7 @@ export const translations = {
     footer: {
       navHeading: "Navigate",
       contactHeading: "Contact",
-      ctaHeading: "Talk to an engineer",
-      ctaText: "Share your RFQ schedule or tooling move plan and we will suggest the best launch path.",
+      tagline: "Precision · Quality · Reliability",
       rights: "All rights reserved.",
     },
   },
@@ -311,14 +316,15 @@ export const translations = {
     code: "zh",
     label: "简体中文",
     direction: "ltr",
-    common: {
-      brandTop: "南京万佳精密注塑有限公司",
-      companyName: "Nanjing Wanjia Precesion Injection Co., Ltd.",
-      legalName: "南京万佳精密注塑有限公司",
-      vision: "以质量与数字创新为核心，打造智能化、全球化的精密制造能力。",
-      address: "中国南京市江宁智能制造园创新路18号",
-      phone: "+86-25-6123-8899",
-      email: "info@plasynex.com",
+      common: {
+        brandTop: "南京万佳精密注塑有限公司",
+        companyName: "Nanjing Wanjia Precesion Injection Co., Ltd.",
+        legalName: "南京万佳精密注塑有限公司",
+        vision: "以质量与数字创新为核心，打造智能化、全球化的精密制造能力。",
+        address: "中国 江苏省 南京市 经济技术开发区兴科路15号 (210038)",
+        phone: "+86 25 8556 8600",
+        fax: "+86 25 8561 1800",
+        email: "lizairong@njwanjia.com",
       hours: "周一至周五 08:30-18:00（北京时间）",
       slogan: "智能制造时代的精密注塑合作伙伴",
     },
@@ -354,19 +360,23 @@ export const translations = {
       home: "首页",
       about: "关于我们",
       products: "产品中心",
-      quality: "质量体系",
+      quality: "品质保障",
       manufacturing: "制造能力",
       contact: "联系我们",
     },
     hero: {
-      eyebrow: "智能化 · 全球化 · 精密制造",
+      eyebrow: "智能 · 全球 · 精密制造",
+      companyLine: "南京万佳精密注塑有限公司",
       title: "智能制造时代的精密注塑合作伙伴",
-      subtitle:
-        "Plasynex（南京万佳精密注塑有限公司）结合模具经验、MES 可视化与高外观喷涂，为显示器、EV 与包装客户提供高复杂度的塑料解决方案。",
+      description:
+        "依托多行业累积的精密注塑技术和生产数据驱动的工艺管理能力，我们在同一园区完成从设计、注塑到加工/装配的全流程，把控稳定品质与高效节拍。业务覆盖显示器、电视、家电外壳以及二次电池生产/物流托盘等产品。",
+      identityLine1: "Nanjing Wanjia Precision Injection Co., Ltd.",
+      identityLine2: "PRECISION · QUALITY · RELIABILITY",
       primaryCta: "查看产品",
       secondaryCta: "获取报价",
     },
     home: {
+      visualHeadline: "智造现场 · 精密制造",
       strengthsHeading: "核心优势",
       strengths: [
         {
@@ -556,6 +566,7 @@ export const translations = {
       description: "欢迎分享显示器、电池或 EV 项目规划，我们将提供定制化量产方案。",
       addressLabel: "地址",
       phoneLabel: "电话",
+      faxLabel: "传真",
       emailLabel: "邮箱",
       hoursLabel: "工作时间",
       form: {
@@ -571,8 +582,7 @@ export const translations = {
     footer: {
       navHeading: "快速导航",
       contactHeading: "联系方式",
-      ctaHeading: "与工程师沟通",
-      ctaText: "告知 RFQ 或模具转移计划，我们将建议最优导入路径。",
+      tagline: "Precision · Quality · Reliability",
       rights: "版权所有。",
     },
   },
@@ -582,12 +592,13 @@ export const translations = {
     direction: "ltr",
     common: {
       brandTop: "南京万佳精密注塑有限公司",
-      companyName: "난징 완자 정밀 사출 유한공사",
-      legalName: "난징 완쟈 정밀 사출 유한공사",
+      companyName: "난징 완지아 정밀 사출 유한공사",
+      legalName: "난징 완지아 정밀 사출 유한공사",
       vision: "품질과 디지털 혁신을 기반으로 한 스마트 글로벌 정밀 제조.",
-      address: "중국 장쑤성 난징시 장닝 스마트제조 구 혁신로 18번지",
-      phone: "+86-25-6123-8899",
-      email: "info@plasynex.com",
+      address: "中国 江苏省 南京市 经济技术开发区兴科路15号 (210038)",
+      phone: "+86 25 8556 8600",
+      fax: "+86 25 8561 1800",
+      email: "lizairong@njwanjia.com",
       hours: "월–금 08:30-18:00 (CST)",
       slogan: "스마트 제조 시대의 정밀 사출 전문 파트너",
     },
@@ -623,19 +634,23 @@ export const translations = {
       home: "홈",
       about: "회사소개",
       products: "제품",
-      quality: "품질 시스템",
+      quality: "품질 중심",
       manufacturing: "제조 역량",
       contact: "문의하기",
     },
     hero: {
       eyebrow: "스마트 · 글로벌 · 정밀 제조",
-      title: "스마트 제조 시대의 정밀 사출 전문 파트너",
-      subtitle:
-        "Plasynex(난징 완쟈 정밀 사출)는 금형 노하우와 MES 데이터, 고급 도장 기술을 결합해 모니터, EV, 패키징 프로젝트를 수행합니다.",
+      companyLine: "난징 완지아 정밀사출 유한회사",
+      title: "스마트 제조 시대, 정밀 사출 제품을 위한 파트너",
+      description:
+        "다양한 산업 분야에서 축적한 정밀 사출 기술과 생산 데이터 기반의 공정 관리 역량을 바탕으로, 모니터·TV·세탁기 등 글로벌 브랜드의 가전제품 하우징부터 2차전지용 생산·물류 트레이까지 설계에서 조립까지 모든 공정을 통합 관리하여 안정적인 품질과 효율적인 제조 서비스를 제공합니다.",
+      identityLine1: "Nanjing Wanjia Precision Injection Co., Ltd.",
+      identityLine2: "PRECISION · QUALITY · RELIABILITY",
       primaryCta: "제품 보기",
       secondaryCta: "견적 요청",
     },
     home: {
+      visualHeadline: "스마트 제조의 실제 현장",
       strengthsHeading: "핵심 역량",
       strengths: [
         {
@@ -825,6 +840,7 @@ export const translations = {
       description: "모니터, 배터리, EV 부품 계획을 알려주시면 맞춤형 런칭 플랜을 제안드립니다.",
       addressLabel: "주소",
       phoneLabel: "전화",
+      faxLabel: "팩스",
       emailLabel: "이메일",
       hoursLabel: "근무시간",
       form: {
@@ -840,8 +856,7 @@ export const translations = {
     footer: {
       navHeading: "바로가기",
       contactHeading: "연락처",
-      ctaHeading: "엔지니어와 상담",
-      ctaText: "RFQ 일정이나 금형 이전 계획을 공유하면 최적의 런칭 전략을 제안드립니다.",
+      tagline: "Precision · Quality · Reliability",
       rights: "무단 복제를 금합니다.",
     },
   },

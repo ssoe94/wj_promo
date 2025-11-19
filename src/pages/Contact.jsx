@@ -20,16 +20,20 @@ const Contact = () => {
         <div className="contact-info">
           <div>
             <p className="label">{contact.addressLabel}</p>
-            <p>{content.common.address}</p>
-          </div>
-          <div>
-            <p className="label">{contact.phoneLabel}</p>
-            <p>{content.common.phone}</p>
-          </div>
-          <div>
-            <p className="label">{contact.emailLabel}</p>
-            <p>{content.common.email}</p>
-          </div>
+        <p>{content.common.address}</p>
+      </div>
+      <div>
+        <p className="label">{contact.phoneLabel}</p>
+        <p>{content.common.phone}</p>
+      </div>
+      <div>
+        <p className="label">{contact.faxLabel}</p>
+        <p>{content.common.fax}</p>
+      </div>
+      <div>
+        <p className="label">{contact.emailLabel}</p>
+        <p>{content.common.email}</p>
+      </div>
           <div>
             <p className="label">{contact.hoursLabel}</p>
             <p>{content.common.hours}</p>
@@ -64,4 +68,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
