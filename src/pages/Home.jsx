@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
 import HeroSection from "../components/HeroSection";
+import CoreIcon from "../components/icons/CoreIcon";
+import SummaryIcon from "../components/icons/SummaryIcon";
+import machinesImage from "../../resources/machines.JPG";
+import operationImage from "../../resources/operation.JPG";
+import digitalImage from "../../resources/digital.jpg";
 import { useLanguage } from "../context/LanguageContext";
 import { usePageMetadata } from "../hooks/usePageMetadata";
 
@@ -7,34 +12,66 @@ const Home = () => {
   const { content } = useLanguage();
   usePageMetadata(content.meta.home, content.code);
 
+  const factoryBackgrounds = {
+    machines: machinesImage,
+    operation: operationImage,
+    digital: digitalImage,
+  };
+
   return (
     <div className="page home-page">
       <HeroSection />
 
       <section className="card-section">
-        <h2>{content.home.strengthsHeading}</h2>
+        <div className="section-heading with-icon">
+          <CoreIcon />
+          <h2>{content.home.strengthsHeading}</h2>
+        </div>
         <div className="card-grid">
           {content.home.strengths.map((item) => (
             <article className="info-card" key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
+              {item.icon && (
+                <span className="card-icon" aria-hidden="true">
+                  {item.icon}
+                </span>
+              )}
+              <div className="card-copy">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
             </article>
           ))}
         </div>
       </section>
 
       <section className="card-section factory">
-        <div className="section-heading">
-          <h2>{content.home.factoryHeading}</h2>
-          <p>{content.common.vision}</p>
+        <div className="section-heading with-icon">
+          <SummaryIcon />
+          <div>
+            <h2>{content.home.factoryHeading}</h2>
+            <p>{content.common.vision}</p>
+          </div>
         </div>
         <div className="card-grid three">
-          {content.home.factoryHighlights.map((item) => (
-            <article className="highlight-card" key={item.label}>
-              <p className="label">{item.label}</p>
-              <p>{item.text}</p>
-            </article>
-          ))}
+          {content.home.factoryHighlights.map((item) => {
+            const bgImage = item.background ? factoryBackgrounds[item.background] : null;
+            const cardClasses = ["highlight-card"];
+            if (bgImage) {
+              cardClasses.push("with-bg", `bg-${item.background}`);
+            }
+            return (
+              <article
+                className={cardClasses.join(" ")}
+                key={item.label}
+                style={bgImage ? { backgroundImage: `url(${bgImage})` } : undefined}
+              >
+                <div className="card-copy">
+                  <p className="label">{item.label}</p>
+                  <p>{item.text}</p>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </section>
 
@@ -66,4 +103,3 @@ const Home = () => {
 };
 
 export default Home;
-
