@@ -2,7 +2,7 @@ export const heroCopy = {
   en: {
     eyebrow: "Precision · Quality · Reliability",
     companyLine: "Nanjing Wanjia Precision Injection Co., Ltd.",
-    titleLines: ["Precision builds quality,", "quality earns reliability."],
+    titleLines: ["PRECISION BUILDS QUALITY,", "QUALITY EARNS RELIABILITY."],
     description: [
       "Built on precision molding expertise and shop-floor process control across industries,",
       "covering monitor/TV housings for global brands to EV battery production and logistics trays,",
