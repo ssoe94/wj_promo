@@ -129,7 +129,7 @@ export const translations = {
         title: "Ready for your next display or EV build?",
         text: "Share your drawings or RFQ details and our bilingual engineers will respond within one business day.",
         primary: "Contact Team",
-        secondary: "Download Capability Sheet",
+        secondary: "Download Company Deck",
       },
     },
     about: {
@@ -447,7 +447,7 @@ export const translations = {
         title: "开启下一代显示或 EV 项目？",
         text: "欢迎提供图纸或 RFQ 信息，我们的双语工程师将在 1 个工作日内回复。",
         primary: "联系团队",
-        secondary: "下载能力简介",
+        secondary: "公司介绍下载",
       },
     },
     about: {
@@ -733,10 +733,10 @@ export const translations = {
         "자동차·EV 부품",
       ],
       ctaBanner: {
-        title: "다음 디스플레이 또는 EV 프로젝트를 준비 중이신가요?",
-        text: "도면이나 RFQ 정보를 보내주시면 하루 이내에 엔지니어가 회신드립니다.",
-        primary: "팀에 문의",
-        secondary: "역량 브로슈어",
+        title: "새로운 플라스틱 사출 부품이 필요한 프로젝트를 준비 중이신가요?",
+        text: "도면이나 RFQ 정보를 보내주시면 24시간 내에 바로 회신드립니다.",
+        primary: "이메일로 문의",
+        secondary: "회사소개서 보기",
       },
     },
     about: {

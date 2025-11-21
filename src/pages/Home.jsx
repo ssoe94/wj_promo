@@ -5,6 +5,8 @@ import SummaryIcon from "../components/icons/SummaryIcon";
 import machinesImage from "../../resources/machines.JPG";
 import operationImage from "../../resources/operation.JPG";
 import digitalImage from "../../resources/digital.jpg";
+import emailImg from "../../resources/email.png";
+import profileImg from "../../resources/profile.png";
 import { useLanguage } from "../context/LanguageContext";
 import { usePageMetadata } from "../hooks/usePageMetadata";
 
@@ -90,11 +92,18 @@ const Home = () => {
           <p>{content.home.ctaBanner.text}</p>
         </div>
         <div className="cta-actions">
-          <Link className="primary-btn" to="/contact">
-            {content.home.ctaBanner.primary}
-          </Link>
-          <a className="secondary-btn" href={`mailto:${content.common.email}`}>
-            {content.home.ctaBanner.secondary}
+          <a className="primary-btn pill" href={`mailto:${content.common.email}`}>
+            <img className="btn-avatar" src={emailImg} alt="" loading="lazy" />
+            <span className="btn-label">{content.home.ctaBanner.primary}</span>
+          </a>
+          <a
+            className="secondary-btn pill"
+            href="https://wjmes.my.canvasite.cn/general"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img className="btn-avatar" src={profileImg} alt="" loading="lazy" />
+            <span className="btn-label">{content.home.ctaBanner.secondary}</span>
           </a>
         </div>
       </section>

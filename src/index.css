@@ -103,15 +103,21 @@ main {
 }
 
 .brand-top {
-  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  font-size: clamp(1.15rem, 2.6vw, 1.45rem);
   color: var(--primary-brand);
   font-weight: 600;
   line-height: 1.2;
 }
 
+.brand-top-zh {
+  font-family: "STKaiti", "KaiTi", "KaiTi SC", "Kaiti TC", "DFKai-SB", serif;
+  font-weight: 600;
+}
+
 .brand-bottom {
   font-size: clamp(0.65rem, 1.4vw, 0.85rem);
   color: var(--text-secondary);
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 .main-nav {
@@ -659,13 +665,58 @@ main {
   align-items: center;
 }
 
+.cta-actions {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cta-actions .primary-btn,
+.cta-actions .secondary-btn {
+  flex: 1 1 180px;
+  text-align: center;
+}
+
+.pill {
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+}
+
+.btn-avatar {
+  width: 24px;
+  height: 22px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.pill .btn-label {
+  display: inline-block;
+  margin-left: 0.55rem;
+}
+
+.cta-banner .primary-btn {
+  background: linear-gradient(100deg, #2c73ff 0%, #2cc5dd 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 10px 26px rgba(4, 22, 70, 0.28);
+}
+
+.cta-banner .primary-btn:hover {
+  background: linear-gradient(100deg, #3d86ff 0%, #3ad0e6 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(4, 22, 70, 0.35);
+}
+
 .cta-banner .secondary-btn {
-  border-color: rgba(255, 255, 255, 0.7);
-  color: var(--white);
+  background: linear-gradient(105deg, #0bb28c 0%, #0fa4ce 50%, #1b5dff 100%);
+  border: none;
+  color: #fff;
+  box-shadow: 0 10px 26px rgba(5, 38, 68, 0.26);
 }
 
 .cta-banner .secondary-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(105deg, #12c7a1 0%, #18b9df 52%, #2c70ff 100%);
+  border: none;
 }
 
 .page-hero {

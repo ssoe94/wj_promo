@@ -39,7 +39,9 @@ const Header = () => {
           <Link to="/" className="brand-link" onClick={() => setMenuOpen(false)}>
             <img className="brand-logo" src={logo} alt="Nanjing Wanjia Precesion Injection Co., Ltd. logo" />
             <div className="brand-text">
-              <strong className="brand-top">南京万佳精密注塑有限公司</strong>
+              <strong className="brand-top brand-top-zh">
+                南京万佳精密注塑有限公司
+              </strong>
               <span className="brand-bottom">Nanjing Wanjia Precesion Injection Co., Ltd.</span>
             </div>
           </Link>
