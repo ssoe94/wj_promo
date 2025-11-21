@@ -439,7 +439,16 @@ main {
 
 /* Language-specific font sizes */
 .lang-en .hero-text-block h1 {
-  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-size: clamp(2.8rem, 5vw, 3.6rem);
+}
+.lang-en .hero-eyebrow {
+  font-size: 1.2rem;
+}
+.lang-en .hero-company {
+  font-size: 1.6rem;
+}
+.lang-en .hero-subhead {
+  font-size: 1.25rem;
 }
 
 .lang-ko .hero-eyebrow {
