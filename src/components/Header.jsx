@@ -42,7 +42,10 @@ const Header = () => {
               <strong className="brand-top brand-top-zh">
                 南京万佳精密注塑有限公司
               </strong>
-              <span className="brand-bottom">Nanjing Wanjia Precesion Injection Co., Ltd.</span>
+              <span className="brand-bottom">
+                {"  "}
+                Nanjing Wanjia Precesion Injection Co., Ltd.
+              </span>
             </div>
           </Link>
         </div>
