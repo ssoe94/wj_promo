@@ -16,6 +16,16 @@ const HeroSection = () => {
     ));
   };
 
+  const renderDescription = () => {
+    const lines = Array.isArray(copy.description) ? copy.description : [copy.description ?? ""];
+    return lines.map((line, index) => (
+      <span key={`${line}-${index}`}>
+        {line}
+        {index !== lines.length - 1 && <br />}
+      </span>
+    ));
+  };
+
   return (
     <section className="hero" style={{ backgroundImage: `url(${heroImage})` }}>
       <div className="hero-overlay" />
@@ -23,11 +33,13 @@ const HeroSection = () => {
         <p className="hero-eyebrow">{copy.eyebrow}</p>
         <p className="hero-company">{copy.companyLine}</p>
         <h1>{renderTitle()}</h1>
-        <p className="hero-subhead">{copy.description}</p>
-        <div className="hero-identity">
-          <span>{copy.identityLine1}</span>
-          <span>{copy.identityLine2}</span>
-        </div>
+        <p className="hero-subhead">{renderDescription()}</p>
+        {(copy.identityLine1 || copy.identityLine2) && (
+          <div className="hero-identity">
+            {copy.identityLine1 && <span>{copy.identityLine1}</span>}
+            {copy.identityLine2 && <span>{copy.identityLine2}</span>}
+          </div>
+        )}
       </div>
     </section>
   );
