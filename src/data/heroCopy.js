@@ -19,7 +19,7 @@ export const heroCopy = {
   },
   ko: {
     eyebrow: "Precision · Quality · Reliability",
-    companyLine: "南京万佳精密注塑有限公司",
+    companyLine: "난징 완지아 정밀사출 유한회사",
     titleLines: ["정밀함이 품질을 만들고,", "품질이 신뢰를 완성합니다."],
     description: "다양한 산업에서 축적된 정밀 사출 기술과 현장 중심의 공정 운영 능력을 기반으로,",
     identityLine1: "모니터·TV 등 글로벌 가전 하우징부터 2차전지 생산·물류 트레이까지",
