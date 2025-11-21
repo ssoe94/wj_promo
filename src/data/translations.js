@@ -62,17 +62,16 @@ export const translations = {
       contact: "Contact",
     },
     hero: {
-    hero: {
-      eyebrow: "",
-      companyLine: "",
-      title: "",
-      description: "",
-      identityLine1: "",
-      identityLine2: "",
-      primaryCta: "",
-      secondaryCta: "",
-    },
-
+      eyebrow: "Precision · Quality · Reliability",
+      companyLine: "南京万佳精密注塑有限公司",
+      title: "정밀함이 품질을 만들고,",
+      description: "품질이 신뢰를 완성합니다.",
+      identityLine1:
+        "다양한 산업에서 축적된 정밀 사출 기술과 현장 중심의 공정 운영 능력을 기반으로,",
+      identityLine2:
+        "모니터·TV 등 글로벌 가전 하우징부터 2차전지 생산·물류 트레이까지",
+      primaryCta: "설계–사출–조립–검사 전 과정을 통합하여",
+      secondaryCta: "안정적인 품질과 예측 가능한 공급을 제공합니다.",
     },
     home: {
       visualHeadline: "Smart, precise manufacturing in action",
@@ -126,10 +125,10 @@ export const translations = {
         "Automotive & EV components",
       ],
       ctaBanner: {
-        title: "Ready for your next display or EV build?",
-        text: "Share your drawings or RFQ details and our bilingual engineers will respond within one business day.",
-        primary: "Contact Team",
-        secondary: "Download Company Deck",
+        title: "Preparing a project that needs new plastic injection parts?",
+        text: "Send us your drawings or RFQ details and we will reply within 24 hours.",
+        primary: "Email our team",
+        secondary: "View company deck",
       },
     },
     about: {
@@ -380,17 +379,15 @@ export const translations = {
       contact: "联系我们",
     },
     hero: {
-    hero: {
-      eyebrow: "",
-      companyLine: "",
+      eyebrow: "Precision · Quality · Reliability",
+      companyLine: "南京万佳精密注塑有限公司",
       title: "",
-      description: "",
-      identityLine1: "",
-      identityLine2: "",
+      description: "다양한 산업에서 축적된 정밀 사출 기술과 현장 중심의 공정 운영 능력을 기반으로,",
+      identityLine1: "모니터·TV 등 글로벌 가전 하우징부터 2차전지 생산·물류 트레이까지",
+      identityLine2: "설계–사출–조립–검사 전 과정을 통합하여 안정적인 품질과 예측 가능한 공급을 제공합니다.",
       primaryCta: "",
       secondaryCta: "",
-    },
-
+      titleLines: ["정밀함이 품질을 만들고,", "품질이 신뢰를 완성합니다."],
     },
     home: {
       visualHeadline: "智造现场 · 精密制造",
@@ -444,10 +441,10 @@ export const translations = {
         "汽车 / EV 部件",
       ],
       ctaBanner: {
-        title: "开启下一代显示或 EV 项目？",
-        text: "欢迎提供图纸或 RFQ 信息，我们的双语工程师将在 1 个工作日内回复。",
-        primary: "联系团队",
-        secondary: "公司介绍下载",
+        title: "正在筹备新的塑料注塑件项目？",
+        text: "请发送图纸或 RFQ 信息，我们将在 24 小时内回复。",
+        primary: "邮件咨询",
+        secondary: "查看公司介绍",
       },
     },
     about: {
@@ -669,17 +666,15 @@ export const translations = {
       contact: "문의하기",
     },
     hero: {
-    hero: {
-      eyebrow: "",
-      companyLine: "",
+      eyebrow: "Precision · Quality · Reliability",
+      companyLine: "南京万佳精密注塑有限公司",
       title: "",
-      description: "",
-      identityLine1: "",
-      identityLine2: "",
+      description: "다양한 산업에서 축적된 정밀 사출 기술과 현장 중심의 공정 운영 능력을 기반으로,",
+      identityLine1: "모니터·TV 등 글로벌 가전 하우징부터 2차전지 생산·물류 트레이까지",
+      identityLine2: "설계–사출–조립–검사 전 과정을 통합하여 안정적인 품질과 예측 가능한 공급을 제공합니다.",
       primaryCta: "",
       secondaryCta: "",
-    },
-
+      titleLines: ["정밀함이 품질을 만들고,", "품질이 신뢰를 완성합니다."],
     },
     home: {
       visualHeadline: "스마트 제조의 실제 현장",

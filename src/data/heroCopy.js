@@ -2,11 +2,7 @@ export const heroCopy = {
   en: {
     eyebrow: "Smart · Global · Precision Manufacturing",
     companyLine: "Nanjing Wanjia Precision Injection Co., Ltd.",
-    titleLines: [
-      "Your partner",
-      "for precision injection products",
-      "in the smart manufacturing era",
-    ],
+    titleLines: ["Your partner", "for precision injection products", "in the smart manufacturing era"],
     description:
       "Leveraging decades of precision molding expertise and data-driven process control, we manage every step from design through assembly to deliver stable quality and efficient production. From monitor, TV, and appliance housings for global brands to EV battery production and logistics trays, everything is produced on one integrated campus.",
     identityLine1: "Nanjing Wanjia Precision Injection Co., Ltd.",
@@ -22,13 +18,11 @@ export const heroCopy = {
     identityLine2: "PRECISION · QUALITY · RELIABILITY",
   },
   ko: {
-    eyebrow: "스마트 · 글로벌 · 정밀 제조",
-    companyLine: "난징 완지아 정밀사출 유한회사",
-    titleLines: ["스마트 제조 시대,", "정밀 사출 제품을 위한 파트너"],
-    description:
-      "다양한 산업 분야에서 축적한 정밀 사출 기술과 생산 데이터 기반의 공정 관리 역량을 바탕으로, 모니터·TV·세탁기 등 글로벌 브랜드의 가전제품 하우징부터 2차전지용 생산·물류 트레이까지 설계에서 조립까지 모든 공정을 통합 관리하여 안정적인 품질과 효율적인 제조 서비스를 제공합니다.",
-    identityLine1: "Nanjing Wanjia Precision Injection Co., Ltd.",
-    identityLine2: "PRECISION · QUALITY · RELIABILITY",
+    eyebrow: "Precision · Quality · Reliability",
+    companyLine: "南京万佳精密注塑有限公司",
+    titleLines: ["정밀함이 품질을 만들고,", "품질이 신뢰를 완성합니다."],
+    description: "다양한 산업에서 축적된 정밀 사출 기술과 현장 중심의 공정 운영 능력을 기반으로,",
+    identityLine1: "모니터·TV 등 글로벌 가전 하우징부터 2차전지 생산·물류 트레이까지",
+    identityLine2: "설계–사출–조립–검사 전 과정을 통합하여 안정적인 품질과 예측 가능한 공급을 제공합니다.",
   },
 };
-
