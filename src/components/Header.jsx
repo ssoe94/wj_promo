@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 import logo from "../assets/wj_logo.png";
 
 const Header = () => {
   const { content } = useLanguage();
+  const location = useLocation();
   const nav = content.navigation;
   const navOrder = ["home", "about", "products", "quality", "manufacturing", "contact"];
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -51,16 +52,26 @@ const Header = () => {
         </div>
 
         <nav className={`main-nav ${isMenuOpen ? "is-open" : ""}`}>
-          {navOrder.map((key) => (
-            <NavLink
-              key={key}
-              to={key === "home" ? "/" : `/${key}`}
-              className="nav-link"
-              onClick={() => setMenuOpen(false)}
-            >
-              {nav[key]}
-            </NavLink>
-          ))}
+          {navOrder.map((key) => {
+            if (key === "about") {
+              const to = location.pathname === "/" ? "#about-summary" : "/#about-summary";
+              return (
+                <Link key={key} to={to} className="nav-link" onClick={() => setMenuOpen(false)}>
+                  {nav[key]}
+                </Link>
+              );
+            }
+            return (
+              <NavLink
+                key={key}
+                to={key === "home" ? "/" : `/${key}`}
+                className="nav-link"
+                onClick={() => setMenuOpen(false)}
+              >
+                {nav[key]}
+              </NavLink>
+            );
+          })}
         </nav>
 
         <div className="header-actions">
