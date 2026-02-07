@@ -150,7 +150,7 @@ const Home = () => {
           <SummaryIcon />
           <div>
             <h2>{content.home.factoryHeading}</h2>
-            <p>{content.common.vision}</p>
+            <p>{content.home.factorySubheading ?? content.common.vision}</p>
           </div>
         </div>
         <div className="card-grid three">
@@ -160,15 +160,18 @@ const Home = () => {
             if (bgImage) {
               cardClasses.push("with-bg", `bg-${item.background}`);
             }
+            const cardTitle = item.title ?? item.label;
+            const cardBody = item.body ?? item.text;
             return (
               <article
                 className={cardClasses.join(" ")}
-                key={item.label}
+                key={cardTitle}
                 style={bgImage ? { backgroundImage: `url(${bgImage})` } : undefined}
               >
                 <div className="card-copy">
-                  <p className="label">{renderMultiline(item.label)}</p>
-                  <p className="home-multiline">{item.text}</p>
+                  <p className="label">{renderMultiline(cardTitle)}</p>
+                  {item.highlight && <p className="highlight-line">{renderMultiline(item.highlight)}</p>}
+                  <p className={`home-multiline ${item.highlight ? "desc" : ""}`}>{cardBody}</p>
                 </div>
               </article>
             );

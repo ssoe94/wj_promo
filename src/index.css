@@ -728,7 +728,7 @@ main {
   border: none;
   color: #fff;
   min-height: 240px;
-  padding: 2rem;
+  padding: 24px;
   align-items: flex-end;
   background-size: cover;
   background-position: center;
@@ -740,7 +740,9 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(140deg, rgba(6, 18, 45, 0.78), rgba(4, 34, 78, 0.62));
+  background:
+    linear-gradient(140deg, rgba(6, 18, 45, 0.28), rgba(4, 34, 78, 0.18)),
+    linear-gradient(to top, rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.06));
 }
 
 .highlight-card.with-bg .card-copy {
@@ -750,7 +752,7 @@ main {
 
 .highlight-card.with-bg .label,
 .highlight-card.with-bg p {
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .highlight-card.with-bg .label {
@@ -764,13 +766,30 @@ main {
 .highlight-card .label {
   font-size: 1.2rem;
   font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
   color: var(--primary-brand);
+  margin: 0;
+}
+
+.highlight-card .highlight-line {
+  margin: 8px 0 0;
+  font-weight: 600;
+  line-height: 1.35;
+  opacity: 0.92;
+}
+
+.highlight-card .desc {
+  margin-top: 11px;
+  font-weight: 500;
+  line-height: 1.6;
+  opacity: 0.88;
 }
 
 @media (max-width: 640px) {
   .highlight-card.with-bg {
     min-height: 200px;
-    padding: 1.75rem;
+    padding: 20px;
     background-position: center;
   }
 }
