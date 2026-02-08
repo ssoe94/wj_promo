@@ -1,4 +1,4 @@
-export const languageOptions = [
+﻿export const languageOptions = [
   { code: "en", label: "English" },
   { code: "zh", label: "简体中文" },
   { code: "ko", label: "한국어" },
@@ -80,30 +80,138 @@ export const translations = {
         {
           title: "Injection Production Capability",
           background: "machines",
-          highlight: "450-2500T, 17 injection machines · 760K EA+/year",
-          body: "Stable mass production for large and precision parts.",
+          highlight: "17 Injection Machines · 450–2500T Range",
+          body: "Stable and consistent mass production for large and precision parts.",
         },
         {
           title: "Finishing, Inspection & Automation",
           background: "operation",
-          highlight: "4 finishing lines · inspection/automation equipment",
-          body: "Integrated post-process flow to reduce quality variation.",
+          highlight: "Integrated Finishing & Inspection Process",
+          body: "Integrated post-process flow to effectively reduce quality variation.",
         },
         {
           title: "MES-Based Quality Traceability",
           background: "digital",
-          highlight: "Process data management · history traceability",
-          body: "Data-driven quality control with faster issue response.",
+          highlight: "Process Data & Full Traceability",
+          body: "Data-driven quality control enabling faster issue response.",
         },
       ],
       customersHeading: "Main product fields",
       customers: ["Display components", "Projector components", "Washing machine components", "Industrial trays", "Automotive & EV components"],
+      productFields: {
+        title: "Industries & Products",
+        subtitle: "Injection, post-process, and traceability aligned to support stable mass production.",
+        tabs: [
+          {
+            id: "display",
+            label: "Display & Home Appliance",
+            description: "Stable production of large molded parts with cosmetic and dimensional requirements.",
+            cards: [
+              {
+                id: "cover",
+                title: "TV / Monitor Back Covers",
+                bullets: ["Warp control on large surfaces", "Dimensional repeatability by lot"],
+                keyline: "Cosmetic and dimensional consistency",
+              },
+              {
+                id: "stand",
+                title: "Stands & Brackets",
+                bullets: ["Fit-critical interfaces and datum control", "Standardized work for repeatable output"],
+                keyline: "Assembly fit with consistent cosmetic quality",
+              },
+              {
+                id: "appliance",
+                title: "Appliance Components",
+                bullets: ["Durability-driven material and process control", "Balanced efficiency and quality output"],
+                keyline: "Consistent appearance quality in mass production",
+              },
+            ],
+          },
+          {
+            id: "projector",
+            label: "Projector & Optical",
+            description: "Integrated processes for parts requiring precise assembly and structural stability.",
+            cards: [
+              {
+                id: "housing",
+                title: "Housings & Covers",
+                bullets: ["Precision fastening features and datum control", "Cosmetic control for visible surfaces"],
+                keyline: "Precision molding with stable cosmetic control",
+              },
+              {
+                id: "frame",
+                title: "Frames & Supports",
+                bullets: ["Rigidity and flatness control for stable fit", "Deformation suppression under load and heat"],
+                keyline: "Structural stability through controlled molding",
+              },
+              {
+                id: "assembly",
+                title: "Assembly-Ready Support",
+                bullets: ["Tolerance stack-up verified for assembly", "Inspection linkage for fit assurance"],
+                keyline: "Precision assembly compatibility",
+              },
+            ],
+          },
+          {
+            id: "logistics",
+            label: "Industrial & Logistics",
+            description: "Durable large-part molding for repeated handling and transport environments.",
+            cards: [
+              {
+                id: "tray",
+                title: "Logistics / Stacking Trays",
+                bullets: ["Impact resistance for repeated handling", "Stacking stability with stiffness control"],
+                keyline: "Durability for repeated handling environments",
+              },
+              {
+                id: "battery",
+                title: "Battery Trays",
+                bullets: ["Dimensional control for pack fit", "Mix-up prevention with traceable ID"],
+                keyline: "Reliable operation through traceable control",
+              },
+              {
+                id: "solution",
+                title: "Packaging & Handling",
+                bullets: ["Standardized handling specs for repeat cycles", "Delivery stability across repeat runs"],
+                keyline: "Stable supply for repeated logistics cycles",
+              },
+            ],
+          },
+          {
+            id: "automotive",
+            label: "Automotive & New Energy",
+            description: "Data-driven quality management for projects requiring traceability and change control.",
+            cards: [
+              {
+                id: "auto",
+                title: "Automotive Structural Parts",
+                bullets: ["Stable processes to meet quality specs", "Documented controls for repeatability"],
+                keyline: "Consistent quality through controlled production",
+              },
+              {
+                id: "energy",
+                title: "Energy / Battery Parts",
+                bullets: ["Full traceability with process data", "History-based change control"],
+                keyline: "Process control based on traceable history",
+              },
+              {
+                id: "custom",
+                title: "Customer-Specific Support",
+                bullets: ["Change control for program updates", "Fast issue response with closed-loop actions"],
+                keyline: "Continuous improvement through change control",
+              },
+            ],
+          },
+        ],
+        cta: {
+          primary: "View Examples",
+          secondary: "Request an RFQ",
+        },
+      },
       aboutSummary: {
-        heading: "About Nanjing Wanjia Precision Injection",
-        lead:
-          "Nanjing Wanjia Precision Injection specializes in stable mass production of plastic injection parts for home appliances, display, and energy industries.",
-        details:
-          "From molding to assembly, we integrate process control, quality management, and operational discipline to deliver predictable quality and supply stability.",
+        heading: "Nanjing Wanjia Precision Injection Co., Ltd.",
+        lead: "Stable mass production with consistent quality for home appliances, displays, and energy applications. From large cosmetic housings to precision functional parts.",
+        details: "One production flow from injection process through post-processing, assembly, and inspection. Process history and change control deliver predictable quality and stable supply.",
         cta: "Learn More",
       },
       ctaBanner: {
@@ -305,10 +413,120 @@ export const translations = {
       ],
       customersHeading: "主要产品领域",
       customers: ["显示器部件", "投影仪部件", "洗衣机部件", "工业物流托盘", "汽车与新能源部件"],
+      productFields: {
+        title: "应用行业与代表产品",
+        subtitle: "将注塑、后工序与追溯管理联动，支持稳定量产。",
+        tabs: [
+          {
+            id: "display",
+            label: "显示器·家电",
+            description: "面向外观与尺寸要求较高的大型注塑件，实现稳定量产。",
+            cards: [
+              {
+                id: "cover",
+                title: "电视/显示器后盖",
+                bullets: ["大面积外观面翘曲/变形控制", "尺寸一致性与批次复现"],
+                keyline: "外观与尺寸一致性",
+              },
+              {
+                id: "stand",
+                title: "支架·固定件",
+                bullets: ["装配适配与接口尺寸控制", "标准化流程保障重复产出"],
+                keyline: "装配完成度与外观稳定",
+              },
+              {
+                id: "appliance",
+                title: "生活家电部件",
+                bullets: ["耐久要求导向的材料/工艺", "量产效率与质量平衡"],
+                keyline: "量产外观一致性",
+              },
+            ],
+          },
+          {
+            id: "projector",
+            label: "投影·光学",
+            description: "以一体化流程应对精密装配与结构稳定性要求。",
+            cards: [
+              {
+                id: "housing",
+                title: "外壳·盖件",
+                bullets: ["精密紧固特征与基准控制", "外观面工艺稳定控制"],
+                keyline: "精密注塑与外观受控",
+              },
+              {
+                id: "frame",
+                title: "结构件·支撑件",
+                bullets: ["刚性/平整度指标控制", "抑制变形的工艺优化"],
+                keyline: "结构稳定性保障",
+              },
+              {
+                id: "assembly",
+                title: "装配配套",
+                bullets: ["装配公差匹配与验证", "检测联动确保适配性"],
+                keyline: "精密装配适配",
+              },
+            ],
+          },
+          {
+            id: "logistics",
+            label: "工业·物流",
+            description: "面向重复搬运环境，保障结构稳定与耐久性。",
+            cards: [
+              {
+                id: "tray",
+                title: "物流/堆叠托盘",
+                bullets: ["重复搬运场景耐久设计", "堆叠稳定所需强度控制"],
+                keyline: "重复使用耐久性",
+              },
+              {
+                id: "battery",
+                title: "电池托盘",
+                bullets: ["尺寸管控与防混入机制", "可追溯ID支撑过程控制"],
+                keyline: "追溯支撑可靠运行",
+              },
+              {
+                id: "solution",
+                title: "包装与搬运",
+                bullets: ["标准化作业提升周转效率", "重复物流周期交付稳定"],
+                keyline: "稳定供应能力",
+              },
+            ],
+          },
+          {
+            id: "automotive",
+            label: "汽车·新能源",
+            description: "针对追溯与变更管理要求，以数据化质量管理支撑项目。",
+            cards: [
+              {
+                id: "auto",
+                title: "汽车结构/内饰部件",
+                bullets: ["过程稳定满足质量要求", "受控生产确保一致输出"],
+                keyline: "受控生产的一致品质",
+              },
+              {
+                id: "energy",
+                title: "能源/电池相关部件",
+                bullets: ["过程数据与全程追溯", "基于履历的变更管理"],
+                keyline: "履历驱动过程管控",
+              },
+              {
+                id: "custom",
+                title: "客户定制支持",
+                bullets: ["变更管理与快速响应", "闭环改善减少重复问题"],
+                keyline: "变更驱动持续改善",
+              },
+            ],
+          },
+        ],
+        cta: {
+          primary: "查看案例",
+          secondary: "提交询价",
+        },
+      },
       aboutSummary: {
-        heading: "关于南京万佳精密注塑有限公司",
-        lead: "南京万佳精密注塑专注于家电、显示与新能源领域塑料注塑件的稳定量产。",
-        details: "从注塑到组装，我们整合工艺控制、品质管理与运营纪律，确保品质可预测、供给更稳定。",
+        heading: "南京万佳精密注塑有限公司",
+        lead: "面向家电、显示与能源领域的塑料注塑部件稳定量产。\n覆盖大型外观件到精密功能件，品质一致可控。",
+        details: "从注塑到后工序、组装与检测，全流程一体化运行。\n基于工艺履历与变更管理，实现可预测的品质与稳定供应。",
         cta: "了解更多",
       },
       ctaBanner: {
@@ -466,18 +684,18 @@ export const translations = {
     },
     home: {
       visualHeadline: "공장 역량",
-      strengthsHeading: "양산을 안정시키는 4가지 운영 역량",
-      strengthsSubheading: "공정, 품질, 대응, 운영을 하나의 흐름으로 연결합니다.",
+      strengthsHeading: "안정적인 양산을 위한 4가지 핵심 역량",
+      strengthsSubheading: "공정과 품질, 대응과 운영을 하나의 흐름으로 연결합니다.",
       strengths: [
         {
           icon: "01",
-          title: "안정적인 양산을 위한\n끊김 없는 생산 흐름",
-          text: "공정 간 이관 포인트를 줄입니다.\n양산 초기 택타임을 안정화합니다.\n전 단계 흐름을 일관되게 유지합니다.",
+          title: "안정적인 양산을 위한\n일체화된 생산 흐름",
+          text: "불필요한 공정 이동을 줄이고,\n생산 흐름을 안정적으로 유지합니다.\n흔들림 없는 생산을 목표로 합니다.",
         },
         {
           icon: "02",
-          title: "신뢰 품질을 위한\n재발 방지 문제 대응",
-          text: "원인을 빠르게 식별합니다.\n개선 조치를 반복 가능하게 만듭니다.\n문제가 다시 발생하지 않게 합니다.",
+          title: "고객의 신뢰를 위한\n신속한 품질 대응 방식",
+          text: "문제의 원인을 빠르게 식별하고,\n개선 조치를 체계적으로 적용합니다.\n문제가 반복되지 않도록 개선합니다.",
         },
         {
           icon: "03",
@@ -514,10 +732,120 @@ export const translations = {
       ],
       customersHeading: "주요 제품 분야",
       customers: ["디스플레이 부품", "프로젝터 부품", "세탁기 부품", "산업/물류 트레이", "자동차/신에너지 부품"],
+      productFields: {
+        title: "적용 산업 및 대표 제품",
+        subtitle: "산업별 요구 조건에 맞춘 사출·후공정·추적 관리로 안정적인 양산을 지원합니다.",
+        tabs: [
+          {
+            id: "display",
+            label: "디스플레이·가전",
+            description: "외관 품질과 치수 안정성이 중요한 대형 사출 부품을 안정적으로 양산합니다.",
+            cards: [
+              {
+                id: "cover",
+                title: "TV/모니터 케이스",
+                bullets: ["대형 외관면 휨/변형 관리", "치수 편차 최소화 및 재현성 확보"],
+                keyline: "외관·치수 일관성",
+              },
+              {
+                id: "stand",
+                title: "스탠드·브라켓류",
+                bullets: ["조립 적합성 기준 관리", "반복 생산을 위한 공정 표준화"],
+                keyline: "조립 완성도·외관 안정",
+              },
+              {
+                id: "appliance",
+                title: "세탁기/생활가전 부품",
+                bullets: ["내구 요구 대응 소재/조건 관리", "양산 효율과 품질 균형"],
+                keyline: "양산 품질 일관성",
+              },
+            ],
+          },
+          {
+            id: "projector",
+            label: "프로젝터·광학",
+            description: "정밀 조립과 구조 안정성이 요구되는 부품을 공정 일체화로 대응합니다.",
+            cards: [
+              {
+                id: "housing",
+                title: "하우징·커버류",
+                bullets: ["정밀 체결부/기준면 치수 관리", "외관 품질을 위한 공정 제어"],
+                keyline: "정밀·외관 품질 제어",
+              },
+              {
+                id: "frame",
+                title: "구조 프레임/지지부",
+                bullets: ["강성/평탄도 기준 관리", "변형 억제를 위한 조건 최적화"],
+                keyline: "구조 안정성 확보",
+              },
+              {
+                id: "assembly",
+                title: "조립 대응",
+                bullets: ["공정 연계로 조립 편차 최소화", "검사 연동으로 적합성 검증"],
+                keyline: "정밀 조립 적합성",
+              },
+            ],
+          },
+          {
+            id: "logistics",
+            label: "산업·물류",
+            description: "대형 사출과 반복 사용 환경을 고려해 구조 안정성과 내구성을 확보합니다.",
+            cards: [
+              {
+                id: "tray",
+                title: "물류/적재 트레이",
+                bullets: ["반복 취급 환경 내구 설계", "적재 안정성을 위한 강성 관리"],
+                keyline: "반복 사용 내구성",
+              },
+              {
+                id: "battery",
+                title: "2차전지 트레이",
+                bullets: ["치수 기준 및 혼입 방지 관리", "이력 추적으로 공정 신뢰성 강화"],
+                keyline: "추적 기반 운영",
+              },
+              {
+                id: "solution",
+                title: "포장/운반 솔루션",
+                bullets: ["표준화 운영으로 물류 효율 확보", "반복 사이클 납기 안정"],
+                keyline: "공급 안정성 강화",
+              },
+            ],
+          },
+          {
+            id: "automotive",
+            label: "자동차·신에너지",
+            description: "추적성과 변경 관리가 중요한 프로젝트에 데이터 기반 품질 관리로 대응합니다.",
+            cards: [
+              {
+                id: "auto",
+                title: "자동차 구조/내장 부품",
+                bullets: ["품질 기준 충족을 위한 공정 안정", "문서화된 관리로 재현성 확보"],
+                keyline: "관리되는 품질",
+              },
+              {
+                id: "energy",
+                title: "에너지/배터리 관련 부품",
+                bullets: ["공정 데이터 기반 이력 추적", "변경 관리로 리스크 최소화"],
+                keyline: "이력 기반 공정 관리",
+              },
+              {
+                id: "custom",
+                title: "고객 요구 맞춤 대응",
+                bullets: ["변경 관리 기반 신속 대응", "재발 방지 개선 루프 운영"],
+                keyline: "지속 개선 체계",
+              },
+            ],
+          },
+        ],
+        cta: {
+          primary: "제품 사례 보기",
+          secondary: "RFQ 문의",
+        },
+      },
       aboutSummary: {
         heading: "난징 완지아 정밀사출 유한회사",
-        lead: "Nanjing Wanjia Precision Injection은 가전, 디스플레이, 에너지 산업용 플라스틱 사출 부품의 안정적 양산에 특화되어 있습니다.",
-        details: "사출부터 조립까지 공정 제어, 품질 관리, 운영 규율을 통합해 예측 가능한 품질과 안정적 공급을 제공합니다.",
+        lead: "안정적인 양산과 일관된 품질을 기반으로, 가전·디스플레이·에너지 산업의 플라스틱 사출 부품을 대형 외관 부품부터 정밀 기능 부품까지 폭넓게 생산합니다.",
+        details: "사출공정부터 후공정, 조립, 검사까지 전 공정을 하나의 흐름으로 운영합니다.\n공정 이력과 변경 관리를 통해 예측 가능한 품질과 안정적인 공급을 제공합니다.",
         cta: "자세히 보기",
       },
       ctaBanner: {

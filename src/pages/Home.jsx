@@ -1,10 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import HeroSection from "../components/HeroSection";
+import ProductFieldsSection from "../components/ProductFieldsSection";
+import ScrollCue from "../components/ScrollCue";
 import CoreIcon from "../components/icons/CoreIcon";
 import SummaryIcon from "../components/icons/SummaryIcon";
 import machinesImage from "../../resources/machines.JPG";
-import operationImage from "../../resources/operation.JPG";
+import operationImage from "../../resources/assembly.png";
 import digitalImage from "../../resources/digital.jpg";
 import productsImage from "../../resources/products.png";
 import emailImg from "../../resources/email.png";
@@ -15,6 +17,12 @@ import { usePageMetadata } from "../hooks/usePageMetadata";
 const Home = () => {
   const { content } = useLanguage();
   usePageMetadata(content.meta.home, content.code);
+  const [isBooting, setIsBooting] = useState(true);
+  const [showScrollCue, setShowScrollCue] = useState(false);
+  const [scrollCueTone, setScrollCueTone] = useState("hero");
+  const heroRef = useRef(null);
+  const ctaRef = useRef(null);
+  const nextSectionRef = useRef(null);
 
   useEffect(() => {
     const cards = Array.from(document.querySelectorAll(".home-page .motion-card"));
@@ -38,14 +46,22 @@ const Home = () => {
     );
 
     cards.forEach((card, index) => {
-      card.classList.add("motion-ready");
+      const noReveal = card.classList.contains("motion-card-no-reveal");
       card.classList.remove("is-visible");
+      if (noReveal) {
+        card.classList.remove("motion-ready");
+        card.classList.add("is-visible");
+      } else {
+        card.classList.add("motion-ready");
+      }
       card.style.setProperty("--reveal-delay", `${(index * 0.12).toFixed(2)}s`);
       card.style.setProperty("--tilt-x", "0deg");
       card.style.setProperty("--tilt-y", "0deg");
       card.style.setProperty("--shadow-x", "0px");
       card.style.setProperty("--shadow-y", "0px");
-      revealObserver.observe(card);
+      if (!noReveal) {
+        revealObserver.observe(card);
+      }
 
       const handleMove = (event) => {
         const rect = card.getBoundingClientRect();
@@ -85,6 +101,80 @@ const Home = () => {
     };
   }, [content.code]);
 
+  useEffect(() => {
+    const done = () => setIsBooting(false);
+    const timer = window.setTimeout(done, 900);
+    window.addEventListener("load", done, { once: true });
+    return () => {
+      window.clearTimeout(timer);
+      window.removeEventListener("load", done);
+    };
+  }, []);
+
+  useEffect(() => {
+    const heroElement = heroRef.current;
+    const ctaElement = ctaRef.current;
+    if (!heroElement || !ctaElement) {
+      return undefined;
+    }
+
+    let heroVisible = false;
+    let ctaVisible = false;
+
+    const updateTone = () => {
+      if (ctaVisible) {
+        setScrollCueTone("cta");
+        return;
+      }
+      if (heroVisible) {
+        setScrollCueTone("hero");
+        return;
+      }
+      setScrollCueTone("");
+    };
+
+    const heroObserver = new IntersectionObserver(
+      (entries) => {
+        heroVisible = entries[0]?.isIntersecting ?? false;
+        updateTone();
+      },
+      { threshold: 0.2 }
+    );
+
+    const ctaObserver = new IntersectionObserver(
+      (entries) => {
+        ctaVisible = entries[0]?.isIntersecting ?? false;
+        updateTone();
+      },
+      { threshold: 0.2 }
+    );
+
+    heroObserver.observe(heroElement);
+    ctaObserver.observe(ctaElement);
+
+    return () => {
+      heroObserver.disconnect();
+      ctaObserver.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    const updateCueVisibility = () => {
+      const remaining = document.documentElement.scrollHeight - (window.scrollY + window.innerHeight);
+      const hasMoreBelow = remaining > 120;
+      setShowScrollCue(hasMoreBelow);
+    };
+
+    updateCueVisibility();
+    window.addEventListener("scroll", updateCueVisibility, { passive: true });
+    window.addEventListener("resize", updateCueVisibility);
+
+    return () => {
+      window.removeEventListener("scroll", updateCueVisibility);
+      window.removeEventListener("resize", updateCueVisibility);
+    };
+  }, []);
+
   const factoryBackgrounds = {
     machines: machinesImage,
     operation: operationImage,
@@ -106,9 +196,11 @@ const Home = () => {
 
   return (
     <div className="page home-page">
-      <HeroSection />
+      <div ref={heroRef}>
+        <HeroSection />
+      </div>
 
-      <section className="card-section">
+      <section className="card-section" ref={nextSectionRef}>
         <div className="section-heading with-icon">
           <CoreIcon />
           <div>
@@ -133,11 +225,14 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="about-summary-home motion-card" id="about-summary">
+      <section
+        className={`about-summary-home motion-card motion-card-no-tilt section-shell ${isBooting ? "is-booting" : ""}`}
+        id="about-summary"
+      >
         <div className="about-summary-copy">
           <h2>{content.home.aboutSummary.heading}</h2>
-          <p>{content.home.aboutSummary.lead}</p>
-          <p>{content.home.aboutSummary.details}</p>
+          <p className="home-multiline">{content.home.aboutSummary.lead}</p>
+          <p className="home-multiline">{content.home.aboutSummary.details}</p>
           <Link className="secondary-btn" to="/about">
             {content.home.aboutSummary.cta}
           </Link>
@@ -145,7 +240,7 @@ const Home = () => {
         <div className="about-summary-media" style={{ backgroundImage: `url(${productsImage})` }} aria-hidden="true" />
       </section>
 
-      <section className="card-section factory">
+      <section className={`card-section factory motion-card-no-reveal section-shell ${isBooting ? "is-booting" : ""}`}>
         <div className="section-heading with-icon">
           <SummaryIcon />
           <div>
@@ -179,16 +274,14 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="customers motion-card">
-        <h2>{content.home.customersHeading}</h2>
-        <div className="customer-row">
-          {content.home.customers.map((customer) => (
-            <span key={customer}>{customer}</span>
-          ))}
-        </div>
-      </section>
+      <ProductFieldsSection home={content.home} isBooting={isBooting} />
 
-      <section className="cta-banner motion-card">
+      <section
+        ref={ctaRef}
+        className={`cta-banner motion-card motion-card-no-tilt motion-card-no-reveal section-shell ${
+          isBooting ? "is-booting" : ""
+        }`}
+      >
         <div>
           <h3>{content.home.ctaBanner.title}</h3>
           <p>{content.home.ctaBanner.text}</p>
@@ -209,6 +302,23 @@ const Home = () => {
           </a>
         </div>
       </section>
+
+      <ScrollCue
+        variant="C"
+        visible={showScrollCue}
+        tone={scrollCueTone}
+        languageCode={content.code}
+        ariaLabel={
+          content.code === "ko"
+            ? "다음 섹션으로 이동"
+            : content.code === "zh"
+              ? "滚动到下一部分"
+              : "Scroll to next section"
+        }
+        onClick={() => {
+          nextSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }}
+      />
     </div>
   );
 };
