@@ -22,12 +22,48 @@ export const translations = {
       slogan: "Precision Injection Molding for a Smarter Future",
     },
     meta: {
-      home: { title: "Wanjia", description: "Precision injection and assembly partner." },
-      about: { title: "About Wanjia", description: "Company profile and milestones." },
-      products: { title: "Wanjia Products", description: "Appliance and EV plastic parts." },
-      quality: { title: "Wanjia Quality", description: "ISO-based quality and traceability." },
-      manufacturing: { title: "Wanjia Manufacturing", description: "Injection, assembly, automation, MES." },
-      contact: { title: "Contact Wanjia", description: "Reach us for new projects and RFQ." },
+      home: {
+        title: "Nanjing Wanjia Precision Injection | China Mass Production Injection Molding & Assembly",
+        description:
+          "China-based mass production injection molding and assembly partner for home appliance, display, and new energy plastic components with traceable quality control.",
+        keywords:
+          "Nanjing injection molding factory, China injection molding, mass production injection molding, large injection molding, home appliance plastic parts, display housing molding, battery tray molding, injection molding assembly",
+      },
+      about: {
+        title: "About Nanjing Wanjia | China Injection Molding Factory",
+        description:
+          "Profile of a China injection molding factory focused on mass production, large injection molding capability, and integrated assembly for home appliance and new energy sectors.",
+        keywords:
+          "about injection molding factory, China injection molding plant, large injection molding capability, home appliance supplier China, Nanjing plastic injection company",
+      },
+      products: {
+        title: "Injection Molded Products | Home Appliance, Display, New Energy",
+        description:
+          "Injection molded plastic products for home appliance, display, logistics, and new energy applications with stable mass production and assembly-ready quality.",
+        keywords:
+          "injection molded products, home appliance plastic parts, display back cover molding, battery tray injection molding, large plastic housing, China plastic components",
+      },
+      quality: {
+        title: "Quality & Traceability | Injection Molding Mass Production",
+        description:
+          "ISO-oriented quality assurance, process traceability, and controlled change management for stable injection molding mass production and predictable delivery.",
+        keywords:
+          "injection molding quality control, traceability manufacturing, ISO 9001 injection molding, process change control, mass production quality assurance",
+      },
+      manufacturing: {
+        title: "Manufacturing Capability | Large Injection Molding & Assembly",
+        description:
+          "Manufacturing capability covering large injection molding, post-processing, assembly, inspection, and MES-based execution for stable mass production.",
+        keywords:
+          "large injection molding, injection molding assembly line, post processing plastic parts, MES manufacturing, China injection molding capability",
+      },
+      contact: {
+        title: "Contact Nanjing Wanjia | China Injection Molding Supplier",
+        description:
+          "Contact a China-based injection molding supplier for RFQ, home appliance plastic parts, large injection molding projects, and mass production support.",
+        keywords:
+          "contact injection molding supplier, RFQ injection molding China, home appliance plastic parts supplier, Nanjing injection molding contact",
+      },
     },
     navigation: {
       home: "Home",
@@ -338,12 +374,48 @@ export const translations = {
       slogan: "面向智能制造时代的精密注塑伙伴",
     },
     meta: {
-      home: { title: "万佳精密注塑", description: "精密注塑与组装合作伙伴。" },
-      about: { title: "关于万佳", description: "公司介绍与发展里程碑。" },
-      products: { title: "万佳产品", description: "家电与汽车塑料部件产品矩阵。" },
-      quality: { title: "万佳品质", description: "ISO体系化品质与追溯管理。" },
-      manufacturing: { title: "万佳制造", description: "注塑、组装、自动化与MES执行。" },
-      contact: { title: "联系万佳", description: "欢迎新项目与RFQ咨询。" },
+      home: {
+        title: "南京万佳精密注塑有限公司 | 中国量产注塑与组装",
+        description:
+          "专注家电、显示与新能源塑料部件量产，提供注塑、后工序、组装与质量追溯一体化能力，保障稳定供货与一致品质。",
+        keywords:
+          "注塑, 注塑厂, 中国注塑厂, 南京注塑厂, 量产注塑, 大型注塑, 家电注塑, 显示器注塑, 新能源注塑, 注塑组装",
+      },
+      about: {
+        title: "关于南京万佳精密注塑 | 中国量产注塑厂",
+        description:
+          "了解南京万佳精密注塑有限公司，聚焦家电与新能源塑料件量产，具备大型注塑、后工序与组装一体化制造能力。",
+        keywords:
+          "南京万佳, 注塑厂介绍, 中国注塑厂, 量产注塑能力, 大型注塑能力, 家电注塑供应商",
+      },
+      products: {
+        title: "产品中心 | 家电显示与新能源注塑部件",
+        description:
+          "覆盖家电、显示、工业物流与新能源场景的注塑产品，提供稳定量产、外观质量与装配适配能力。",
+        keywords:
+          "注塑产品, 家电塑料件, 显示器后盖注塑, 物流托盘注塑, 电池托盘注塑, 大型塑料件量产",
+      },
+      quality: {
+        title: "品质保障 | 注塑质量追溯与过程管控",
+        description:
+          "通过ISO体系、过程追溯与变更管理，构建注塑量产的稳定品质与可预测交付能力。",
+        keywords:
+          "注塑品质管理, 质量追溯, 过程管控, ISO9001注塑, 量产品质保障, 变更管理",
+      },
+      manufacturing: {
+        title: "制造能力 | 大型注塑与组装一体化",
+        description:
+          "制造能力涵盖大型注塑、后工序、组装与检测，并以MES执行系统支撑稳定量产。",
+        keywords:
+          "大型注塑, 注塑组装, 后工序加工, MES制造执行, 注塑产线, 中国量产注塑厂",
+      },
+      contact: {
+        title: "联系我们 | 中国注塑厂RFQ对接",
+        description:
+          "欢迎提交图纸与RFQ，快速对接家电、新能源与大型注塑项目的量产方案。",
+        keywords:
+          "注塑厂联系方式, RFQ注塑, 中国注塑供应商, 家电注塑询价, 南京注塑厂联系",
+      },
     },
     navigation: {
       home: "首页",
@@ -657,12 +729,48 @@ export const translations = {
       slogan: "스마트 제조 시대의 정밀 사출 파트너",
     },
     meta: {
-      home: { title: "Wanjia", description: "정밀 사출 및 조립 파트너." },
-      about: { title: "회사소개", description: "회사 개요와 주요 연혁." },
-      products: { title: "제품", description: "가전/자동차 플라스틱 부품 제품군." },
-      quality: { title: "품질", description: "ISO 기반 품질 관리와 추적성." },
-      manufacturing: { title: "제조역량", description: "사출, 조립, 자동화, MES." },
-      contact: { title: "문의", description: "신규 프로젝트 및 RFQ 문의." },
+      home: {
+        title: "난징 완지아 정밀사출 유한회사 | 중국 양산 사출·조립 전문",
+        description:
+          "가전·디스플레이·신에너지 플라스틱 부품의 중국 양산 사출 전문 기업으로, 사출·후공정·조립·추적 품질관리까지 통합 제공합니다.",
+        keywords:
+          "중국 사출공장, 양산 사출, 대형 사출, 정밀 사출, 가전제품 사출, home appliance plastic parts, injection molding China, 주사출 조립",
+      },
+      about: {
+        title: "회사소개 | 중국 양산 사출공장 난징 완지아",
+        description:
+          "난징 완지아는 가전제품 및 신에너지 부품 양산에 특화된 중국 사출공장으로, 대형 사출부터 조립까지 통합 운영합니다.",
+        keywords:
+          "회사소개 사출공장, 중국 사출 기업, 난징 완지아, 대형 사출 역량, 가전제품 플라스틱 부품",
+      },
+      products: {
+        title: "제품 | 가전·디스플레이·신에너지 사출 부품",
+        description:
+          "가전제품, 디스플레이, 물류, 신에너지 분야의 플라스틱 사출 부품을 안정적인 양산 품질로 제공합니다.",
+        keywords:
+          "사출 제품, 가전제품 사출 부품, 디스플레이 하우징, 배터리 트레이 사출, home appliance injection molding",
+      },
+      quality: {
+        title: "품질 | 양산 사출 품질관리와 추적성",
+        description:
+          "ISO 기반 품질 체계와 공정 추적, 변경 관리를 통해 양산 사출의 품질 일관성과 공급 안정성을 확보합니다.",
+        keywords:
+          "사출 품질관리, 공정 추적성, ISO 사출, 양산 품질 보증, 변경 관리, injection molding quality",
+      },
+      manufacturing: {
+        title: "제조역량 | 대형 사출·후공정·조립 통합",
+        description:
+          "대형 사출, 후공정, 조립, 검사, MES 실행 시스템까지 연결한 통합 제조역량으로 안정 양산을 지원합니다.",
+        keywords:
+          "대형 사출, 사출 조립 라인, 후공정, MES 제조, 중국 양산 사출, injection molding assembly",
+      },
+      contact: {
+        title: "문의 | 중국 사출공장 RFQ 접수",
+        description:
+          "신규 프로젝트 도면과 RFQ를 보내주시면 양산 사출, 가전제품 부품, 대형 사출 프로젝트를 빠르게 검토합니다.",
+        keywords:
+          "사출 RFQ 문의, 중국 사출공장 연락처, 가전제품 부품 문의, 양산 사출 견적",
+      },
     },
     navigation: {
       home: "홈",

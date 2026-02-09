@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
 
 const ProductFieldsSection = ({ home, isBooting = false }) => {
   const productFields = home?.productFields;
@@ -80,14 +79,6 @@ const ProductFieldsSection = ({ home, isBooting = false }) => {
             ))}
           </div>
 
-          <div className="product-panel-cta">
-            <Link className="primary-btn" to="/products">
-              {productFields.cta.primary}
-            </Link>
-            <Link className="secondary-btn" to="/contact">
-              {productFields.cta.secondary}
-            </Link>
-          </div>
         </div>
       </div>
     </section>
