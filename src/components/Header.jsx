@@ -54,9 +54,8 @@ const Header = () => {
         <nav className={`main-nav ${isMenuOpen ? "is-open" : ""}`}>
           {navOrder.map((key) => {
             if (key === "about") {
-              const to = location.pathname === "/" ? "#about-summary" : "/#about-summary";
               return (
-                <Link key={key} to={to} className="nav-link" onClick={() => setMenuOpen(false)}>
+                <Link key={key} to="/about" className="nav-link" onClick={() => setMenuOpen(false)}>
                   {nav[key]}
                 </Link>
               );

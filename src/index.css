@@ -1778,6 +1778,7 @@ main {
 
 .footer-identity .brand-bottom {
   color: rgba(255, 255, 255, 0.78);
+  margin-top: 0;
   margin-bottom: 0.3rem;
   font-size: 0.8rem;
   font-weight: 600;
@@ -1789,7 +1790,7 @@ main {
   letter-spacing: normal;
   text-transform: none;
   color: rgba(255, 255, 255, 0.85);
-  margin-top: 0.28rem;
+  margin-top: 0;
   margin-bottom: 0.1rem;
 }
 
@@ -1798,7 +1799,7 @@ main {
   color: #fff;
   font-size: 1.05rem;
   margin-top: 0;
-  margin-bottom: 0.24rem;
+  margin-bottom: 0.2rem;
 }
 
 .footer-contact-row {
