@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
-const ProductFieldsSection = ({ home, isBooting = false }) => {
+const ProductFieldsSection = ({ home, isBooting = false, langCode = "" }) => {
   const productFields = home?.productFields;
   const tabs = productFields?.tabs ?? [];
   const fallbackCustomers = Array.isArray(home?.customers) ? home.customers : [];
@@ -35,7 +35,9 @@ const ProductFieldsSection = ({ home, isBooting = false }) => {
 
   return (
     <section
-      className={`product-fields motion-card motion-card-no-tilt motion-card-no-reveal section-shell ${isBooting ? "is-booting" : ""}`}
+      className={`product-fields lang-${String(langCode).toLowerCase()} motion-card motion-card-no-tilt motion-card-no-reveal section-shell ${
+        isBooting ? "is-booting" : ""
+      }`}
     >
       <div className="section-heading">
         <h2>{productFields.title}</h2>

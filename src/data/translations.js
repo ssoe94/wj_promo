@@ -251,7 +251,7 @@ export const translations = {
         cta: "Learn More",
       },
       ctaBanner: {
-        title: "Planning a new plastic part program?",
+        title: "The value of mass production lies not in how it starts,\nbut in how consistently it continues.",
         text: "Send drawings or RFQ details for quick feedback.",
         primary: "Email our team",
         secondary: "View company profile",
@@ -602,7 +602,7 @@ export const translations = {
         cta: "了解更多",
       },
       ctaBanner: {
-        title: "有新的塑料件项目计划吗？",
+        title: "量产的价值，不在于开始，\n而在于持续稳定的过程。",
         text: "欢迎发送图纸或RFQ信息，我们将尽快回复。",
         primary: "邮件联系",
         secondary: "查看公司介绍",
@@ -721,7 +721,7 @@ export const translations = {
       companyName: "Nanjing Wanjia Precision Injection Co., Ltd.",
       legalName: "Nanjing Wanjia Precision Injection Co., Ltd.",
       vision: "공정 규율과 추적 가능한 실행으로\n안정적인 양산을 실현합니다.",
-      address: "중국 장쑤성 난징 경제기술개발구 싱커로 15호 (210038)",
+      address: "No. 15 Xingke Road, Nanjing Economic & Technological Development Zone, Jiangsu, China (210038)",
       phone: "+86 25 8556 8600",
       fax: "+86 25 8561 1800",
       email: "lizairong@njwanjia.com",
@@ -957,7 +957,7 @@ export const translations = {
         cta: "자세히 보기",
       },
       ctaBanner: {
-        title: "신규 플라스틱 부품 프로젝트를 준비 중이신가요?",
+        title: "양산의 가치는 시작이 아니라,\n안정적으로 이어지는 과정에서 만들어집니다.",
         text: "도면 또는 RFQ 정보를 보내주시면 빠르게 회신드립니다.",
         primary: "이메일 문의",
         secondary: "회사 소개서 보기",

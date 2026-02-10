@@ -274,7 +274,7 @@ const Home = () => {
         </div>
       </section>
 
-      <ProductFieldsSection home={content.home} isBooting={isBooting} />
+      <ProductFieldsSection home={content.home} isBooting={isBooting} langCode={content.code} />
 
       <section
         ref={ctaRef}
@@ -283,7 +283,7 @@ const Home = () => {
         }`}
       >
         <div>
-          <h3>{content.home.ctaBanner.title}</h3>
+          <h3>{renderMultiline(content.home.ctaBanner.title)}</h3>
           <p>{content.home.ctaBanner.text}</p>
         </div>
         <div className="cta-actions">
