@@ -1,31 +1,23 @@
+import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import { usePageMetadata } from "../hooks/usePageMetadata";
-import summaryImage from "../../resources/summary.jpg";
-import machinesImage from "../../resources/machines.JPG";
-import operationImage from "../../resources/operation.JPG";
-import digitalImage from "../../resources/digital.jpg";
+import factoryImage from "../../resources/mold.jpg";
+import statementImage from "../../resources/about2.jpg";
 
 const About = () => {
   const { content } = useLanguage();
   usePageMetadata(content.meta.about, content.code);
+
   const about = content.about;
   const heroBadges = Array.isArray(about.badges) ? about.badges : [];
   const profileHighlights = Array.isArray(about.profileHighlights) ? about.profileHighlights : [];
-  const equipmentList = Array.isArray(about.equipmentList) ? about.equipmentList : [];
-  const systems = Array.isArray(about.systems) ? about.systems : [];
+  const overviewCards = Array.isArray(about.overviewCards) ? about.overviewCards : [];
+  const overviewFacts = Array.isArray(about.overviewFacts) ? about.overviewFacts : [];
+  const valueItems = Array.isArray(about.values) ? about.values : [];
+  const commitmentItems = Array.isArray(about.commitments) ? about.commitments : [];
+  const historyItems = Array.isArray(about.history) ? about.history : [];
   const certifications = Array.isArray(about.certifications) ? about.certifications : [];
   const recognitions = Array.isArray(about.recognitions) ? about.recognitions : [];
-  const sheePoints = Array.isArray(about.sheePoints) ? about.sheePoints : [];
-  const historyItems = Array.isArray(about.history) ? about.history : [];
-  const valueItems = Array.isArray(about.values) ? about.values : [];
-  const capacityItems = Array.isArray(about.capacityPoints) ? about.capacityPoints : [];
-  const mesItems = Array.isArray(about.mesPoints) ? about.mesPoints : [];
-
-  const highlightBackgrounds = {
-    machines: machinesImage,
-    operation: operationImage,
-    digital: digitalImage,
-  };
 
   return (
     <div className="page about-page">
@@ -34,6 +26,7 @@ const About = () => {
           <div className="about-hero-card">
             <h1>{about.heading}</h1>
             <p className="lead">{about.intro}</p>
+            {about.subText && <p className="about-hero-subtext">{about.subText}</p>}
             {heroBadges.length > 0 && (
               <div className="about-badges">
                 {heroBadges.map((badge) => (
@@ -43,119 +36,113 @@ const About = () => {
                 ))}
               </div>
             )}
-          </div>
-          <div className="about-hero-media">
-            <div className="about-hero-tile large" style={{ backgroundImage: `url(${summaryImage})` }} />
-            <div className="about-hero-tile" style={{ backgroundImage: `url(${machinesImage})` }} />
-            <div className="about-hero-orb" aria-hidden="true" />
-          </div>
-        </div>
-      </section>
-
-      {profileHighlights.length > 0 && (
-        <section className="card-section about-highlights">
-          <div className="section-heading">
-            <h2>{about.profileTitle}</h2>
-            {about.profileIntro && <p>{about.profileIntro}</p>}
-          </div>
-          <div className="card-grid three">
-            {profileHighlights.map((item) => {
-              const bgImage = item.background ? highlightBackgrounds[item.background] : null;
-              const cardClasses = ["highlight-card"];
-              if (bgImage) {
-                cardClasses.push("with-bg", `bg-${item.background}`);
-              }
-              return (
-                <article
-                  className={cardClasses.join(" ")}
-                  key={item.label}
-                  style={bgImage ? { backgroundImage: `url(${bgImage})` } : undefined}
-                >
-                  <div className="card-copy">
-                    <p className="label">{item.label}</p>
-                    <p>{item.text}</p>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-        </section>
-      )}
-
-      {equipmentList.length > 0 && (
-        <section className="card-section about-equipment">
-          <div className="section-heading">
-            <h2>{about.equipmentTitle}</h2>
-            {about.equipmentIntro && <p>{about.equipmentIntro}</p>}
-          </div>
-          <div className="about-equipment-grid">
-            <div className="about-equipment-image" style={{ backgroundImage: `url(${operationImage})` }} />
-            <div className="about-equipment-content">
-              <ul className="equipment-list">
-                {equipmentList.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-              {systems.length > 0 && (
-                <div className="equipment-systems">
-                  {systems.map((system) => (
-                    <span className="system-chip" key={system}>
-                      {system}
-                    </span>
-                  ))}
-                </div>
-              )}
+            <div className="about-hero-actions">
+              <a className="primary-btn" href="https://wjmes.my.canvasite.cn/general" target="_blank" rel="noreferrer">
+                {about.ctaProfile}
+              </a>
+              <Link className="secondary-btn" to="/contact">
+                {about.ctaContact}
+              </Link>
             </div>
           </div>
-        </section>
-      )}
-
-      <section className="timeline">
-        <h2>{about.historyTitle}</h2>
-        <div className="timeline-grid">
-          {historyItems.map((item) => (
-            <article key={item.year}>
-              <span className="year">{item.year}</span>
-              <p>{item.text}</p>
-            </article>
-          ))}
+          <div className="about-hero-media">
+            <div className="about-hero-tile large" style={{ backgroundImage: `url(${factoryImage})` }} />
+          </div>
         </div>
       </section>
 
-      <section className="mission-section mission-highlight">
-        <div className="mission-card">
-          <h2>{about.missionTitle}</h2>
-          <p>{about.mission}</p>
-        </div>
-        <div className="mission-values">
-          {valueItems.map((value) => (
-            <article className="value-card" key={value}>
-              <p>{value}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      {capacityItems.length > 0 && (
-        <section className="card-section">
-          <h2>{about.capacityTitle}</h2>
-          <div className="card-grid">
-            {capacityItems.map((point) => (
-              <article className="info-card" key={point}>
-                <p>{point}</p>
+      {overviewCards.length > 0 && (
+        <section className="card-section about-overview">
+          <div className="section-heading about-section-heading">
+            <h2>{about.overviewTitle}</h2>
+          </div>
+          <div className="card-grid four about-overview-kpis">
+            {overviewCards.map((item) => (
+              <article className="info-card about-overview-card" key={`${item.value}-${item.label}`}>
+                <p className="overview-value">{item.value}</p>
+                <p className="overview-label">{item.label}</p>
               </article>
             ))}
           </div>
         </section>
       )}
 
-      {mesItems.length > 0 && (
-        <section className="card-section">
-          <h2>{about.mesTitle}</h2>
-          <div className="card-grid">
-            {mesItems.map((point) => (
-              <article className="info-card" key={point}>
-                <p>{point}</p>
+      <section className="philosophy-section">
+        <div className="philosophy-header">
+          {about.philosophyLabel && <span className="philosophy-label">{about.philosophyLabel}</span>}
+          <h2>{about.philosophyTitle}</h2>
+        </div>
+        {Array.isArray(about.philosophyKeywords) && about.philosophyKeywords.length > 0 && (
+          <p className="philosophy-keywords">{about.philosophyKeywords.join(" · ")}</p>
+        )}
+        {about.philosophyDescription && <p className="philosophy-description">{about.philosophyDescription}</p>}
+        {Array.isArray(about.philosophyPrinciples) && about.philosophyPrinciples.length > 0 && (
+          <div className="philosophy-principles">
+            {about.philosophyPrinciples.map((item) => (
+              <article className="philosophy-principle" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        )}
+      </section>
+
+      {overviewFacts.length > 0 && (
+        <section className="card-section about-overview">
+          <article className="info-card about-overview-facts">
+            <dl className="about-overview-facts-list">
+              {overviewFacts.map((item) => (
+                <div className="about-overview-fact-row" key={`${item.label}-${item.value}`}>
+                  <dt>{item.label}</dt>
+                  <dd>{item.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </article>
+        </section>
+      )}
+
+      {profileHighlights.length > 0 && (
+        <section className="card-section about-factory-statement">
+          <div className="section-heading about-section-heading">
+            <h2>{about.profileTitle}</h2>
+          </div>
+          <div className="about-factory-grid">
+            <div className="about-factory-media" style={{ backgroundImage: `url(${statementImage})` }} aria-hidden="true" />
+            <div className="about-factory-copy">
+              {profileHighlights.map((item) => (
+                <article className="about-factory-point" key={item.label}>
+                  <h3>{item.label}</h3>
+                  <p>{item.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {historyItems.length > 0 && (
+        <section className="about-timeline">
+          <div className="section-heading about-section-heading">
+            <h2>{about.historyTitle}</h2>
+          </div>
+          <div className="timeline-flow">
+            {historyItems.map((item) => (
+              <article className="timeline-node" key={item.year}>
+                <div className="timeline-dot" aria-hidden="true"></div>
+                <div className="timeline-card">
+                  <span className="timeline-year">{item.year}</span>
+                  {Array.isArray(item.points) ? (
+                    <ul>
+                      {item.points.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>{item.text}</p>
+                  )}
+                </div>
               </article>
             ))}
           </div>
@@ -166,13 +153,12 @@ const About = () => {
         <section className="card-section about-awards">
           <div className="section-heading">
             <h2>{about.awardsTitle}</h2>
-            {about.awardsIntro && <p>{about.awardsIntro}</p>}
           </div>
           <div className="card-grid">
             {certifications.length > 0 && (
               <article className="info-card">
                 <h3>{about.certificationsTitle}</h3>
-                <ul>
+                <ul className="certification-list">
                   {certifications.map((item) => (
                     <li key={item}>{item}</li>
                   ))}
@@ -192,30 +178,8 @@ const About = () => {
           </div>
         </section>
       )}
-
-      {sheePoints.length > 0 && (
-        <section className="card-section about-shee">
-          <div className="section-heading">
-            <h2>{about.sheeTitle}</h2>
-            {about.sheeSummary && <p>{about.sheeSummary}</p>}
-          </div>
-          <div className="card-grid">
-            {sheePoints.map((point) => (
-              <article className="value-card" key={point}>
-                <p>{point}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-      )}
-
-      <section className="global-section">
-        <h2>{about.globalTitle}</h2>
-        <p>{about.globalText}</p>
-      </section>
     </div>
   );
 };
 
 export default About;
-
